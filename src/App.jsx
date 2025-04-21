@@ -18,7 +18,7 @@ function App() {
   const fetchCars = async () => {
     try {
       /* Sends a POST request to
-      'http://localhost:8080//api/cars' (backend server) */
+       (backend server) */
       const response = await api.get('');
       setCars(response.data); //update state with cars
     } catch (error) {
