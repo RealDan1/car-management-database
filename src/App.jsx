@@ -120,45 +120,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>MongoDB Auto</h1>
-        {/* Form for adding a new car*/}
-        {/* =============================== */}
-        <h3>Enter values for new car:</h3>
-        <label htmlFor="makeInput">Make:</label>
-        <input
-          id="makeInput"
-          value={newCar.make}
-          onChange={(e) => setNewCar({ ...newCar, make: e.target.value })}
-          placeholder="e.g. Honda"
-        />
-        <label htmlFor="modelInput">Model:</label>
-        <input
-          id="modelInput"
-          value={newCar.model}
-          onChange={(e) => setNewCar({ ...newCar, model: e.target.value })}
-          placeholder="e.g. Civic"
-        />
-        <label htmlFor="yearInput">Year:</label>
-        <input
-          id="yearInput"
-          value={newCar.year}
-          onChange={(e) => setNewCar({ ...newCar, year: Number(e.target.value) })}
-          placeholder="e.g. 2022"
-        />
-        <label htmlFor="ownerInput">Owner:</label>{' '}
-        <input
-          id="ownerInput"
-          value={newCar.owner}
-          onChange={(e) => setNewCar({ ...newCar, owner: e.target.value })}
-          placeholder="e.g. John Doe"
-        ></input>
-        <label htmlFor="registrationInput">Registration:</label>
-        <input
-          id="registrationInput"
-          value={newCar.registration}
-          onChange={(e) => setNewCar({ ...newCar, registration: e.target.value })}
-          placeholder="e.g. ABC123"
-        ></input>
-        <button onClick={addCar}>Add Car</button>
         {/* Form to update cars */}
         {/* ==================================================== */}
         {editingCar && (
@@ -220,6 +181,45 @@ function App() {
             );
           })}
         </ul>
+        {/* Form for adding a new car*/}
+        {/* =============================== */}
+        <h3>Enter values for new car:</h3>
+        <label htmlFor="makeInput">Make:</label>
+        <input
+          id="makeInput"
+          value={newCar.make}
+          onChange={(e) => setNewCar({ ...newCar, make: e.target.value })}
+          placeholder="e.g. Honda"
+        />
+        <label htmlFor="modelInput">Model:</label>
+        <input
+          id="modelInput"
+          value={newCar.model}
+          onChange={(e) => setNewCar({ ...newCar, model: e.target.value })}
+          placeholder="e.g. Civic"
+        />
+        <label htmlFor="yearInput">Year:</label>
+        <input
+          id="yearInput"
+          value={newCar.year}
+          onChange={(e) => setNewCar({ ...newCar, year: Number(e.target.value) })}
+          placeholder="e.g. 2022"
+        />
+        <label htmlFor="ownerInput">Owner:</label>{' '}
+        <input
+          id="ownerInput"
+          value={newCar.owner}
+          onChange={(e) => setNewCar({ ...newCar, owner: e.target.value })}
+          placeholder="e.g. John Doe"
+        ></input>
+        <label htmlFor="registrationInput">Registration:</label>
+        <input
+          id="registrationInput"
+          value={newCar.registration}
+          onChange={(e) => setNewCar({ ...newCar, registration: e.target.value })}
+          placeholder="e.g. ABC123"
+        ></input>
+        <button onClick={addCar}>Add Car</button>
         {/* filter cars for anything older than a certain year*/}
         {/* =============================================== */}
         <h3>Filter cars by any car older than five years:</h3>
