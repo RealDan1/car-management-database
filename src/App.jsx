@@ -76,6 +76,7 @@ function App() {
           }
         })
       );
+      setEditingCar(null);
     } catch (error) {
       console.error('Error updating car:', error);
     }
