@@ -19,7 +19,7 @@ function App() {
     try {
       /* Sends a POST request to
        (backend server) */
-      const response = await api.get('/cars');
+      const response = await api.get('');
       setCars(response.data); //update state with cars
     } catch (error) {
       console.error('Error fetching cars:', error);
